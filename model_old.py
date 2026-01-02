@@ -12,7 +12,7 @@ VirtualCard = None
 def create_models(db):
     global User, FundingRequest, Transaction, Loan, LoanPayment, VirtualCard
 
-       class User(UserMixin, db.Model):
+    class User(UserMixin, db.Model):
         id = db.Column(db.Integer, primary_key=True)
         username = db.Column(db.String(150), unique=True, nullable=False)
         email = db.Column(db.String(150), unique=True, nullable=False)
